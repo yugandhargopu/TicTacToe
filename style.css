@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: #545454;
+    display: flex;
+    font-family:fantasy;
+    justify-content: center;
+  }
+  
+  .container {
+    background: #ec0640e3;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .title span {
+    color: #fcfbf7;
+  }
+  
+  .status-action {
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+    height: 30px;
+  }
+  
+  .status span {
+    color: #fffefa;
+  }
+  
+  .reset {
+    cursor: pointer;
+  }
+  
+  .reset:hover {
+    color: #fcfbf8;
+  }
+  
+  .game-grid {
+    background: #eb0740fd;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+  }
+  
+  .game-cell {
+    background:#cf1342ab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .x,
+  .o {
+    cursor:default;
+  }
+  
+  .x::after {
+    content: '⚔️';
+    font-size: 100px;
+  }
+  
+  .o::after {
+    content: '🛡️';
+    color: #f7f5f3;
+    font-size: 100px;
+  }
+  
+  .won::after {
+    background-color: #1a70c0;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 50px;
+    }
+  
+    .o::after {
+      font-size: 75px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 20px;
+    }
+  
+    .o::after {
+      font-size: 20px;
+    }
+  }
